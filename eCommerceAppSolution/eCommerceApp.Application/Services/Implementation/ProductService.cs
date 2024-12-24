@@ -50,7 +50,7 @@ public class ProductService(IGeneric<Product> productInterface , IMapper mapper)
     public async Task<ServiceResponse> DeleteAsync(Guid id)
     {
         int result = await productInterface.DeleteAsync(id);
-        return result > 0 ? new ServiceResponse(true , "Product successfully deleted") : new ServiceResponse(false , "Product could not be deleted");
+        return result > 0 ? new ServiceResponse(true , "Product successfully deleted") : new ServiceResponse(false , "Product not found or  could not be deleted");
         
     }
 }
