@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eCommerceApp.Domain.Entites
 {
@@ -9,6 +10,7 @@ namespace eCommerceApp.Domain.Entites
 
         public string? Name { get; set; }
         public string? Description { get; set; }
+        [Column("decimal(18,2)")]
         public decimal Price { get; set; }
         public string? Image { get; set; }
         public int Quantity { get; set; }

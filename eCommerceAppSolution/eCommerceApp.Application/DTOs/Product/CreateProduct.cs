@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eCommerceApp.Application.DTOs.Product
 {
-    internal class CreateProduct : ProductBase
+    public class CreateProduct : ProductBase
     {
 
     }
