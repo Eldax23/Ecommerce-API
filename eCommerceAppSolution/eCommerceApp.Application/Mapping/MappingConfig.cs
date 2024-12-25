@@ -11,9 +11,14 @@ public class MappingConfig : Profile
     {
         CreateMap<CreateCategory, Category>();
         CreateMap<CreateProduct, Product>();
+        CreateMap<Category, CreateCategory>();
+        CreateMap<Product, GetProduct>();
 
         CreateMap<GetCategory, Category>();
+        CreateMap<Category, GetCategory>();
         CreateMap<GetProduct, Product>();
+        CreateMap<Product , UpdateProduct>();
+        CreateMap<UpdateProduct , Product>();
 
     }
 }

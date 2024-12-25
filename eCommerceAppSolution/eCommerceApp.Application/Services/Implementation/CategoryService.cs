@@ -10,13 +10,13 @@ namespace eCommerceApp.Application.Services.Implementation;
 
 public class CategoryService(IGeneric<Category> categoryInterface , IMapper mapper) : ICategoryService
 {
-    public async Task<IEnumerable<CreateCategory>> GetAllAsync()
+    public async Task<IEnumerable<GetCategory>> GetAllAsync()
     {
         var categories = await categoryInterface.GetAllAsync();
         if(!categories.Any())
-            return new List<CreateCategory>();
+            return new List<GetCategory>();
 
-        return mapper.Map<IEnumerable<CreateCategory>>(categories);
+        return mapper.Map<IEnumerable<GetCategory>>(categories);
     }
 
     public async Task<GetCategory> GetByIdAsync(Guid id)

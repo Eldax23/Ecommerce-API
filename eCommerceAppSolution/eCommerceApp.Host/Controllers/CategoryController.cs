@@ -12,7 +12,7 @@ namespace eCommerceApp.Host.Controllers
         [HttpGet]
         public async Task<ActionResult> Getall()
         {
-            IEnumerable<CreateCategory> categories = await service.GetAllAsync();
+            IEnumerable<GetCategory> categories = await service.GetAllAsync();
             
             return categories.Any() ? Ok(categories) : NotFound(categories);
         }
@@ -36,7 +36,7 @@ namespace eCommerceApp.Host.Controllers
         }
         
         [HttpPut]
-        public async Task<ActionResult> Add(UpdateCategory category)
+        public async Task<ActionResult> Update(UpdateCategory category)
         {
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);

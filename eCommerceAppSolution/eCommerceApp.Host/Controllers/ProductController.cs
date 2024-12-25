@@ -15,7 +15,7 @@ namespace eCommerceApp.Host.Controllers
         [HttpGet]
         public async Task<ActionResult> Getall()
         {
-            IEnumerable<CreateProduct> products = await service.GetAllAsync();
+            IEnumerable<GetProduct> products = await service.GetAllAsync();
             
             return products.Any() ? Ok(products) : NotFound(products);
         }

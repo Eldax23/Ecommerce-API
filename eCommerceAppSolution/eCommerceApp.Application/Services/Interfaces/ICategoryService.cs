@@ -5,7 +5,7 @@ namespace eCommerceApp.Application.Services.Interfaces;
 
 public interface ICategoryService
 {
-    Task<IEnumerable<CreateCategory>> GetAllAsync();
+    Task<IEnumerable<GetCategory>> GetAllAsync();
     Task<GetCategory> GetByIdAsync(Guid id);
     Task<ServiceResponse> AddAsync(CreateCategory category);
     Task<ServiceResponse> UpdateAsync(UpdateCategory category);

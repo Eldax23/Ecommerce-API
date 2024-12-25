@@ -9,13 +9,13 @@ namespace eCommerceApp.Application.Services.Implementation;
 
 public class ProductService(IGeneric<Product> productInterface , IMapper mapper) : IProductService
 {
-    public async Task<IEnumerable<CreateProduct>> GetAllAsync()
+    public async Task<IEnumerable<GetProduct>> GetAllAsync()
     {
         var products = await productInterface.GetAllAsync();
         if(!products.Any())
-            return new List<CreateProduct>();
+            return new List<GetProduct>();
 
-        return mapper.Map<IEnumerable<CreateProduct>>(products);
+        return mapper.Map<IEnumerable<GetProduct>>(products);
     }
 
     public async Task<GetProduct> GetByIdAsync(Guid id)

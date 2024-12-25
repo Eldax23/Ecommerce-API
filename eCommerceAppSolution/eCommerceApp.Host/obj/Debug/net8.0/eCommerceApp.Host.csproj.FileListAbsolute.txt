@@ -263,4 +263,5 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\runtime
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\eCommerceApp.Infrastructure.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\eCommerceApp.Infrastructure.pdb
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\EntityFramework.Exceptions.Common.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\EntityFramework.Exceptions.SqlServer.dll
