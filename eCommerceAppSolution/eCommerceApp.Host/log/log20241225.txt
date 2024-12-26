@@ -1,0 +1,14 @@
+2024-12-25 22:37:45.223 +02:00 [INF] Application Is Building.....
+2024-12-25 22:37:45.848 +02:00 [INF] Application Is Running.....
+2024-12-25 22:37:45.914 +02:00 [INF] Now listening on: http://localhost:5071
+2024-12-25 22:37:45.919 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-25 22:37:45.919 +02:00 [INF] Hosting environment: Development
+2024-12-25 22:37:45.920 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2024-12-25 22:37:46.331 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2024-12-25 22:37:46.436 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 106.4656ms
+2024-12-25 22:37:46.527 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2024-12-25 22:37:46.648 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.6235ms
+2024-12-25 22:37:50.250 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2024-12-25 22:37:50.254 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 3.8776ms
+2024-12-25 22:37:50.296 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2024-12-25 22:37:50.303 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6044ms

@@ -265,3 +265,12 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\eCommer
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\EntityFramework.Exceptions.Common.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\EntityFramework.Exceptions.SqlServer.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.File.dll
