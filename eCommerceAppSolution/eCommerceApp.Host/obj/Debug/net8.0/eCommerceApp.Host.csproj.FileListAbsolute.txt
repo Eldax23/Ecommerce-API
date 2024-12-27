@@ -274,3 +274,6 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll

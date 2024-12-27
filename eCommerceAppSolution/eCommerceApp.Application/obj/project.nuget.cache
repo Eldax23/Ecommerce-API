@@ -1,14 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "jImDa6XbQeo=",
+  "dgSpecHash": "rKNwuirtBE0=",
   "success": true,
   "projectFilePath": "D:\\Ecommerce-API\\eCommerceAppSolution\\eCommerceApp.Application\\eCommerceApp.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.0\\microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.0\\microsoft.aspnetcore.cryptography.keyderivation.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.0\\microsoft.extensions.identity.core.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.0\\microsoft.extensions.identity.stores.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

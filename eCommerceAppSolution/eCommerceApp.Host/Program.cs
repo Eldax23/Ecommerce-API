@@ -36,15 +36,15 @@ namespace eCommerceApp.Host
                 builder.AddDefaultPolicy(options =>
                 {
 
-                    options.AllowCredentials().AllowAnyHeader()
+                    options.AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowAnyOrigin();
                 });
             });
 
 
-            try
-            {
+            // try
+            // {
 
 
                 var app = builder.Build();
@@ -68,15 +68,15 @@ namespace eCommerceApp.Host
 
                 Log.Logger.Information("Application Is Running.....");
                 app.Run();
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex , "Application Failed To Start");
-            }
-            finally
-            {
-                Log.CloseAndFlush();   
-            }
+            // }
+            // catch (Exception ex)
+            // {
+            //     Log.Error(ex , "Application Failed To Start");
+            // }
+            // finally
+            // {
+            //     Log.CloseAndFlush();   
+            // }
         }
     }
 }

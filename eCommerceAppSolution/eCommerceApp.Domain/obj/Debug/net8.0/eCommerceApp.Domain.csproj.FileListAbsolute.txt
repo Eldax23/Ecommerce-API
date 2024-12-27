@@ -10,3 +10,4 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Domain\obj\Debug\net8.0\eComm
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Domain\obj\Debug\net8.0\refint\eCommerceApp.Domain.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Domain\obj\Debug\net8.0\eCommerceApp.Domain.pdb
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Domain\obj\Debug\net8.0\ref\eCommerceApp.Domain.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Domain\obj\Debug\net8.0\eCommerceApp.Domain.csproj.AssemblyReference.cache

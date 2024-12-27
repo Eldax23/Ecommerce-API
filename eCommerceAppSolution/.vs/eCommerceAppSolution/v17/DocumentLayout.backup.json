@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Ecommerce-API\\eCommerceAppSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Ecommerce-API\\eCommerceAppSolution\\eCommerceApp.Infrastructure\\Migrations\\20241224194844_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eCommerceApp.Infrastructure\\Migrations\\20241224194844_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B0859B8-79EC-4086-B18F-DDD555C19884}|eCommerceApp.Infrastructure\\eCommerceApp.Infrastructure.csproj|d:\\ecommerce-api\\ecommerceappsolution\\ecommerceapp.infrastructure\\migrations\\20241224194844_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0859B8-79EC-4086-B18F-DDD555C19884}|eCommerceApp.Infrastructure\\eCommerceApp.Infrastructure.csproj|solutionrelative:ecommerceapp.infrastructure\\migrations\\20241224194844_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59E0BABF-66F9-43F4-A4C3-034FCFD93BAE}|eCommerceApp.Application\\eCommerceApp.Application.csproj|d:\\ecommerce-api\\ecommerceappsolution\\ecommerceapp.application\\dtos\\category\\categorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,8 +63,7 @@
               "RelativeToolTip": "eCommerceApp.Application\\DTOs\\Category\\CategoryBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T21:39:48.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T21:39:48.492Z"
             },
             {
               "$type": "Document",
