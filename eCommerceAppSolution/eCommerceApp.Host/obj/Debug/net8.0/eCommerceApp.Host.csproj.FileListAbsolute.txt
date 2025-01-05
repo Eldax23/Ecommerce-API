@@ -277,3 +277,6 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Serilog
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

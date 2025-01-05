@@ -16,7 +16,7 @@ public class TokenManagment(AppDbContext context , IConfiguration config) : ITok
 {
     public string GetToken()
     {
-        
+        //this just generates a random token.       
         byte[] randomBytes = new byte[64];
         using (RandomNumberGenerator rnd = RandomNumberGenerator.Create())
         {
