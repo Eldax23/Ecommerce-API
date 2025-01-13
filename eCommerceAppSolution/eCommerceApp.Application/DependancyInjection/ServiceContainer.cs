@@ -1,6 +1,8 @@
 using eCommerceApp.Application.Mapping;
 using eCommerceApp.Application.Services.Implementation;
+using eCommerceApp.Application.Services.Implementation.Authentication;
 using eCommerceApp.Application.Services.Interfaces;
+using eCommerceApp.Application.Services.Interfaces.Authentication;
 using eCommerceApp.Application.Validations;
 using eCommerceApp.Application.Validations.Authentication;
 using FluentValidation;
@@ -19,6 +21,7 @@ public static class ServiceContainer
         services.AddScoped<IValidationService , ValidationService>();
         services.AddFluentValidationAutoValidation();
         services.AddValidatorsFromAssemblyContaining<CreateUserValidation>();
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
         return services;
     }
 }

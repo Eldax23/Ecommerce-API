@@ -1,0 +1,300 @@
+2025-01-09 16:03:14.152 +02:00 [INF] Application Is Building.....
+2025-01-09 16:03:15.493 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-09 16:03:15.691 +02:00 [INF] Application Is Running.....
+2025-01-09 16:03:15.758 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-09 16:03:15.759 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-09 16:03:15.760 +02:00 [INF] Hosting environment: Development
+2025-01-09 16:03:15.760 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-09 16:03:16.435 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-09 16:03:17.290 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 855.6229ms
+2025-01-09 16:03:17.371 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-09 16:03:17.479 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.072ms
+2025-01-09 16:04:09.485 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/register - application/json 133
+2025-01-09 16:04:09.493 +02:00 [INF] CORS policy execution successful.
+2025-01-09 16:04:09.639 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-01-09 16:04:09.642 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:04:09.661 +02:00 [INF] Route matched with {action = "Register", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(eCommerceApp.Application.DTOs.Identity.CreateUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-09 16:04:10.140 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-09 16:04:10.733 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:04:11.683 +02:00 [INF] Executed DbCommand (86ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:04:11.729 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2025-01-09 16:04:11.734 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:04:11.748 +02:00 [INF] Executed action eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) in 2082.8947ms
+2025-01-09 16:04:11.750 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:04:11.752 +02:00 [ERR]  Unknown Exception
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRoleAsync(TUser user, String role)
+   at eCommerceApp.Infrastructure.Repositories.Authentication.RoleManagement.AddUserToRole(AppUser user, String roleName) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Repositories\Authentication\RoleManagement.cs:line 27
+   at eCommerceApp.Application.Services.Implementation.Authentication.AuthenticationService.CreateUser(CreateUser user) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Application\Services\Implementation\Authentication\AuthenticationService.cs:line 44
+   at eCommerceApp.Host.Controllers.AuthenticationController.Register(CreateUser createUser) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\Controllers\AuthenticationController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at eCommerceApp.Infrastructure.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Middleware\ExceptionHandlingMiddleware.cs:line 16
+2025-01-09 16:04:11.808 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/register - 500 null application/json 2323.4959ms
+2025-01-09 16:04:56.673 +02:00 [INF] Application is shutting down...
+2025-01-09 16:05:07.911 +02:00 [INF] Application Is Building.....
+2025-01-09 16:05:09.217 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-09 16:05:09.387 +02:00 [INF] Application Is Running.....
+2025-01-09 16:05:09.623 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-09 16:05:09.626 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-09 16:05:09.626 +02:00 [INF] Hosting environment: Development
+2025-01-09 16:05:09.627 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-09 16:05:09.777 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-09 16:05:10.120 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 343.6862ms
+2025-01-09 16:05:10.194 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-09 16:05:10.332 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 138.0054ms
+2025-01-09 16:05:18.247 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/register - application/json 133
+2025-01-09 16:05:18.252 +02:00 [INF] CORS policy execution successful.
+2025-01-09 16:05:18.405 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-01-09 16:05:18.408 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:05:18.425 +02:00 [INF] Route matched with {action = "Register", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(eCommerceApp.Application.DTOs.Identity.CreateUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-09 16:05:18.819 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-09 16:11:48.722 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:11:49.962 +02:00 [INF] Executed DbCommand (102ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:15:35.016 +02:00 [INF] Application Is Building.....
+2025-01-09 16:15:35.205 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-09 16:15:35.284 +02:00 [INF] Application Is Running.....
+2025-01-09 16:15:35.341 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-09 16:15:35.343 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-09 16:15:35.344 +02:00 [INF] Hosting environment: Development
+2025-01-09 16:15:35.344 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-09 16:15:35.392 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-09 16:15:35.506 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 115.9619ms
+2025-01-09 16:15:35.629 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-09 16:15:35.629 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-09 16:15:35.630 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/favicon-32x32.png - null null
+2025-01-09 16:15:35.638 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 9.0504ms
+2025-01-09 16:15:35.653 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-09 16:15:35.656 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/favicon-32x32.png - 200 628 image/png 26.5988ms
+2025-01-09 16:15:35.800 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.9756ms
+2025-01-09 16:15:35.801 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-09 16:15:35.812 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.4374ms
+2025-01-09 16:15:51.475 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/register - application/json 132
+2025-01-09 16:15:51.480 +02:00 [INF] CORS policy execution successful.
+2025-01-09 16:15:51.487 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-01-09 16:15:51.493 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:15:51.526 +02:00 [INF] Route matched with {action = "Register", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(eCommerceApp.Application.DTOs.Identity.CreateUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-09 16:15:51.865 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-09 16:15:52.574 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:15:53.307 +02:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:15:53.355 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-09 16:15:53.624 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-01-09 16:15:53.647 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2025-01-09 16:15:53.667 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:15:53.690 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-09 16:15:53.696 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-09 16:15:53.712 +02:00 [INF] Executed action eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) in 2179.1303ms
+2025-01-09 16:15:53.714 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:15:53.717 +02:00 [ERR]  Unknown Exception
+System.InvalidOperationException: Role USER does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRoleAsync(TUser user, String role)
+   at eCommerceApp.Infrastructure.Repositories.Authentication.RoleManagement.AddUserToRole(AppUser user, String roleName) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Repositories\Authentication\RoleManagement.cs:line 27
+   at eCommerceApp.Application.Services.Implementation.Authentication.AuthenticationService.CreateUser(CreateUser user) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Application\Services\Implementation\Authentication\AuthenticationService.cs:line 44
+   at eCommerceApp.Host.Controllers.AuthenticationController.Register(CreateUser createUser) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\Controllers\AuthenticationController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at eCommerceApp.Infrastructure.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Middleware\ExceptionHandlingMiddleware.cs:line 16
+2025-01-09 16:15:53.755 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/register - 500 null application/json 2279.7275ms
+2025-01-09 16:18:27.759 +02:00 [INF] Application is shutting down...
+2025-01-09 16:21:04.822 +02:00 [INF] Application Is Building.....
+2025-01-09 16:21:05.263 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:21:05.353 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:23:09.310 +02:00 [INF] Application Is Building.....
+2025-01-09 16:23:09.738 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:23:09.944 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-09 16:23:09.963 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-09 16:23:09.965 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-09 16:23:09.967 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-09 16:23:09.982 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-09 16:23:09.995 +02:00 [INF] Applying migration '20250109142107_AddingAdminRole'.
+2025-01-09 16:23:10.062 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'NormalizedName', N'ConcurrencyStamp') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp])
+VALUES (N'87b25ff4-8623-436e-a318-08bd8e571510', N'Admin', N'ADMIN', N'd94c20ec-a197-4091-9fd4-f0ee86bc16cd');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'NormalizedName', N'ConcurrencyStamp') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2025-01-09 16:23:10.073 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'NormalizedName', N'ConcurrencyStamp') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp])
+VALUES (N'0170afbf-2b39-4a2d-9fc5-bd5583c079e4', N'User', N'USER', N'88022ba0-25cd-4a4a-a05c-da8c81bd4414');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'NormalizedName', N'ConcurrencyStamp') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2025-01-09 16:23:10.076 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250109142107_AddingAdminRole', N'8.0.0');
+2025-01-09 16:25:16.143 +02:00 [INF] Application Is Building.....
+2025-01-09 16:25:16.331 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-09 16:25:16.410 +02:00 [INF] Application Is Running.....
+2025-01-09 16:25:16.461 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-09 16:25:16.463 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-09 16:25:16.464 +02:00 [INF] Hosting environment: Development
+2025-01-09 16:25:16.464 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-09 16:25:16.821 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-09 16:25:16.942 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 121.6575ms
+2025-01-09 16:25:17.029 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-09 16:25:17.136 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.2914ms
+2025-01-09 16:25:29.761 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/register - application/json 132
+2025-01-09 16:25:29.768 +02:00 [INF] CORS policy execution successful.
+2025-01-09 16:25:29.775 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-01-09 16:25:29.779 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:25:29.797 +02:00 [INF] Route matched with {action = "Register", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(eCommerceApp.Application.DTOs.Identity.CreateUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-09 16:25:30.097 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-09 16:25:30.827 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-09 16:25:31.699 +02:00 [INF] Executed DbCommand (57ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:25:31.871 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-09 16:25:31.892 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2025-01-09 16:25:31.903 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:25:31.924 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-09 16:25:31.994 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-01-09 16:25:32.001 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-09 16:25:32.042 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-09 16:25:32.246 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p17='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p18='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FullName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2025-01-09 16:25:32.277 +02:00 [INF] Executed action method eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2174.8549ms.
+2025-01-09 16:25:32.286 +02:00 [INF] Executing OkObjectResult, writing value of type 'eCommerceApp.Application.DTOs.ServiceResponse'.
+2025-01-09 16:25:32.303 +02:00 [INF] Executed action eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host) in 2500.9505ms
+2025-01-09 16:25:32.306 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Register (eCommerceApp.Host)'
+2025-01-09 16:25:32.318 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/register - 200 null application/json; charset=utf-8 2556.7533ms
+2025-01-09 16:27:31.833 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/login - application/json 66
+2025-01-09 16:27:31.837 +02:00 [INF] CORS policy execution successful.
+2025-01-09 16:27:31.837 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host)'
+2025-01-09 16:27:31.842 +02:00 [INF] Route matched with {action = "Login", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(eCommerceApp.Application.DTOs.Identity.LoginUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-09 16:27:31.850 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-09 16:27:31.907 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:27:31.912 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-09 16:27:31.972 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-09 16:27:31.978 +02:00 [INF] Executed action eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host) in 135.9559ms
+2025-01-09 16:27:31.980 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host)'
+2025-01-09 16:27:31.981 +02:00 [ERR]  Unknown Exception
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at eCommerceApp.Infrastructure.Repositories.Authentication.UserManagement.LoginUser(AppUser user) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Repositories\Authentication\UserManagement.cs:line 45
+   at eCommerceApp.Application.Services.Implementation.Authentication.AuthenticationService.LoginUser(LoginUser user) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Application\Services\Implementation\Authentication\AuthenticationService.cs:line 65
+   at eCommerceApp.Host.Controllers.AuthenticationController.Login(LoginUser loginUser) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\Controllers\AuthenticationController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at eCommerceApp.Infrastructure.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Infrastructure\Middleware\ExceptionHandlingMiddleware.cs:line 16
+2025-01-09 16:27:32.005 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/login - 500 null application/json 171.662ms
+2025-01-09 16:28:20.329 +02:00 [INF] Application is shutting down...

@@ -13,10 +13,24 @@ public class UserManagement(IRoleManagement roleManagement, UserManager<AppUser>
     {
         AppUser? tempUser = await GetUserByEmail(user.Email!);
         
-        if(tempUser != null) //user exists in the system
-            return false;
+        // if(tempUser != null) //user exists in the system
+        //     return false;
 
-        return (await userManager.CreateAsync(user, user.PasswordHash!)).Succeeded;
+        IdentityResult result = await userManager.CreateAsync(user);
+
+        string errors = string.Empty;
+        if (!result.Succeeded ) 
+        {
+            foreach (var error in result.Errors)
+            {
+                errors += $"{error.Code}: {error.Description}\n";
+            }
+        }
+
+
+
+        return true;
+
 
     }
 
@@ -27,6 +41,8 @@ public class UserManagement(IRoleManagement roleManagement, UserManager<AppUser>
         if (tempUser is null || roleName is null)
             return false;
 
+        var passwordHasher = new PasswordHasher<AppUser>();
+        var result = passwordHasher.VerifyHashedPassword(tempUser, tempUser.PasswordHash!, user.PasswordHash!);
 
         return await userManager.CheckPasswordAsync(tempUser, user.PasswordHash!);
     }

@@ -17,6 +17,7 @@ public class MappingConfig : Profile
         CreateMap<Product, GetProduct>();
         CreateMap<AppUser, CreateUser>();
         CreateMap<CreateUser, AppUser>();
+        CreateMap<LoginUser, AppUser>();
 
         CreateMap<GetCategory, Category>();
         CreateMap<Category, GetCategory>();

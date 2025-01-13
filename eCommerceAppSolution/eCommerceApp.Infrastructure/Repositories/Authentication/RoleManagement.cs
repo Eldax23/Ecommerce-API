@@ -13,13 +13,20 @@ public class RoleManagement : IRoleManagement
     {
         this._userManager = _userManager;
     }
+    
+    
     public async Task<string?> GetUserRole(string emailAddress)
     {
         AppUser? user = await _userManager.FindByEmailAsync(emailAddress);
         if(user == null)
             return "No user found";
 
-        return (await _userManager.GetRolesAsync(user)).FirstOrDefault();
+        IList<string> roles = await _userManager.GetRolesAsync(user);
+        string? role = roles.FirstOrDefault();
+        if(string.IsNullOrEmpty(role))
+            return "No role found";
+
+        return role;
     }
 
     public async Task<bool> AddUserToRole(AppUser user, string roleName)
