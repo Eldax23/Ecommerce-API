@@ -3,6 +3,7 @@ using eCommerceApp.Application.DTOs.Identity;
 using eCommerceApp.Application.Services.Interfaces.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace eCommerceApp.Host.Controllers
 {
@@ -34,6 +35,32 @@ namespace eCommerceApp.Host.Controllers
                 return BadRequest(result.message);
          
             return Ok(result);  
+        }
+
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update([FromBody] CreateUser createUser)
+        {
+            ServiceResponse result  = await _authenticationService.UpdateUser(createUser);
+            
+            if(!result.success)
+                return BadRequest(result.message);
+            
+            return Ok(result);
+        }
+
+        [HttpPut("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] ForgetPassword user)
+        {
+            if(!ModelState.IsValid)   
+                return BadRequest(ModelState);
+
+            ServiceResponse result = await _authenticationService.ForgetPassword(user);
+            
+            if(!result.success)
+                return BadRequest(result.message);
+            
+            return Ok(result);
         }
     }
 }

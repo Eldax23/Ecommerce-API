@@ -7,6 +7,11 @@ public interface IUserManagement
 {
     Task<bool> CreateUser(AppUser user);
     Task<bool> LoginUser(AppUser user);
+    
+    Task<bool> ChangePassword(string emailAddress , string newPassword);
+
+    Task<bool> UpdateUser(AppUser user);
+    
     Task<AppUser?> GetUserByEmail(string emailAddress);
     Task<AppUser?> GetUserById(string id);
     Task<IEnumerable<AppUser?>> GetAllUsers();

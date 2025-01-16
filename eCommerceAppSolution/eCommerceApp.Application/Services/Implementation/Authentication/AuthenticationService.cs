@@ -54,6 +54,8 @@ public class AuthenticationService(IUserManagement userManagement ,
         //verify email
         return new ServiceResponse(success: true , message: "User Creation Successful");
     }
+    
+    
 
     public async Task<LoginResponse> LoginUser(LoginUser user)
     {
@@ -77,6 +79,35 @@ public class AuthenticationService(IUserManagement userManagement ,
         int saveTokenRes = await tokenManagement.AddToken(mappedModel.Id , refereshToken);
         
         return saveTokenRes <= 0 ? new LoginResponse(success: false , message: "Internal Server Error") : new LoginResponse(success: true , Token: jwtToken ,  refreshToken: refereshToken); 
+    }
+
+    public async Task<ServiceResponse> ForgetPassword(ForgetPassword user)
+    {
+        if(string.IsNullOrEmpty(user.NewPassword))
+            return new ServiceResponse(message: "Password Cannot  Be Empty");
+        
+        bool result = await userManagement.ChangePassword(user.EmailAddress , user.NewPassword);
+        
+        if(!result)
+            return new ServiceResponse(message: "Password Change Failed");
+        
+        return new ServiceResponse(success: true , message: "Password Change Successful");
+    }
+
+    public async Task<ServiceResponse> UpdateUser(CreateUser user)
+    {
+        
+        ServiceResponse validationResult = await validationService.ValidateAsync(user , createUserValidator);
+        if (!validationResult.success)
+            return new ServiceResponse(success: false , message: validationResult.message);
+
+        AppUser mappedUser = mapper.Map<AppUser>(user);
+        mappedUser.PasswordHash = user.Password;
+
+        bool result = await userManagement.UpdateUser(mappedUser);
+
+        return result ? new ServiceResponse(success: true, message: "UserUpdatedSuccessfully") :
+            new ServiceResponse(success: false, message: "UserUpdateFailed");
     }
 
     public async Task<LoginResponse> ReviveToken(string token)

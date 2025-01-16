@@ -1,13 +1,15 @@
 using System.Security.Claims;
+using eCommerceApp.Application.DTOs.Identity;
 using eCommerceApp.Domain.Entites.Identity;
 using eCommerceApp.Domain.Interfaces.Authentication;
 using eCommerceApp.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace eCommerceApp.Infrastructure.Repositories.Authentication;
 
-public class UserManagement(IRoleManagement roleManagement, UserManager<AppUser> userManager , AppDbContext context) : IUserManagement
+public class UserManagement(IRoleManagement roleManagement, UserManager<AppUser> userManager , AppDbContext context  ) : IUserManagement
 {
     public async Task<bool> CreateUser(AppUser user)
     {
@@ -46,6 +48,35 @@ public class UserManagement(IRoleManagement roleManagement, UserManager<AppUser>
 
         return await userManager.CheckPasswordAsync(tempUser, user.PasswordHash!);
     }
+
+    public async Task<bool> ChangePassword(string id, string newPassword)
+    {
+        AppUser? tempUser = await GetUserByEmail(id);
+        if (tempUser is null)
+            return false;
+     
+        var passwordHasher = new PasswordHasher<AppUser>();
+        tempUser.PasswordHash = passwordHasher.HashPassword(tempUser , newPassword);
+
+
+        return await context.SaveChangesAsync() > 0;
+    }
+
+    public async Task<bool> UpdateUser(AppUser user)
+    {
+        if (user is null)
+            return false;
+
+        if (string.IsNullOrWhiteSpace(user.Email))
+            return false;
+        
+        var passwordHasher = new PasswordHasher<AppUser>();
+         user.PasswordHash = passwordHasher.HashPassword(user , user.PasswordHash!);
+         context.Users.Update(user);
+        return await context.SaveChangesAsync() > 0;
+    }
+
+
 
     public async Task<AppUser?> GetUserByEmail(string emailAddress)
         => await userManager.FindByEmailAsync(emailAddress);
