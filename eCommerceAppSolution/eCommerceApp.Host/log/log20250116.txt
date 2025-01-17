@@ -325,3 +325,69 @@ VALUES (@p0, @p1, @p2);
 2025-01-16 12:40:04.633 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host)'
 2025-01-16 12:40:04.634 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/login - 200 null application/json; charset=utf-8 375.637ms
 2025-01-16 12:40:12.585 +02:00 [INF] Application is shutting down...
+2025-01-16 16:09:37.676 +02:00 [INF] Application Is Building.....
+2025-01-16 16:09:37.921 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-16 16:09:38.003 +02:00 [INF] Application Is Running.....
+2025-01-16 16:09:38.071 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-16 16:09:38.072 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 16:09:38.073 +02:00 [INF] Hosting environment: Development
+2025-01-16 16:09:38.073 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-16 16:09:38.347 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-16 16:09:38.468 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 124.1556ms
+2025-01-16 16:09:38.538 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-16 16:09:38.632 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.2854ms
+2025-01-16 16:10:00.457 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5071/api/Authentication/login - application/json 60
+2025-01-16 16:10:00.465 +02:00 [INF] CORS policy execution successful.
+2025-01-16 16:10:00.475 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-01-16 16:10:00.478 +02:00 [INF] Executing endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host)'
+2025-01-16 16:10:00.496 +02:00 [INF] Route matched with {action = "Login", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(eCommerceApp.Application.DTOs.Identity.LoginUser) on controller eCommerceApp.Host.Controllers.AuthenticationController (eCommerceApp.Host).
+2025-01-16 16:10:00.766 +02:00 [INF] Executing action method eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host) - Validation state: "Valid"
+2025-01-16 16:10:01.377 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-16 16:10:02.059 +02:00 [INF] Executed DbCommand (68ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-16 16:10:02.101 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-16 16:10:02.109 +02:00 [INF] Executed action method eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1337.5632ms.
+2025-01-16 16:10:02.118 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-01-16 16:10:02.125 +02:00 [INF] Executed action eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host) in 1623.9514ms
+2025-01-16 16:10:02.126 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.AuthenticationController.Login (eCommerceApp.Host)'
+2025-01-16 16:10:02.139 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5071/api/Authentication/login - 400 null text/plain; charset=utf-8 1681.6097ms
+2025-01-16 16:22:07.884 +02:00 [INF] Application is shutting down...
+2025-01-16 16:29:20.317 +02:00 [INF] Application Is Building.....
+2025-01-16 16:29:20.888 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-16 16:29:20.977 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-16 16:29:45.383 +02:00 [INF] Application Is Building.....
+2025-01-16 16:29:45.836 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-16 16:29:46.087 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-16 16:29:46.107 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-16 16:29:46.110 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-16 16:29:46.112 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-16 16:29:46.126 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-16 16:29:46.139 +02:00 [INF] Applying migration '20250116142923_AddingPaymentMethodsTable'.
+2025-01-16 16:29:46.210 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [PaymentMethods] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_PaymentMethods] PRIMARY KEY ([Id])
+);
+2025-01-16 16:29:46.243 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name') AND [object_id] = OBJECT_ID(N'[PaymentMethods]'))
+    SET IDENTITY_INSERT [PaymentMethods] ON;
+INSERT INTO [PaymentMethods] ([Id], [Name])
+VALUES ('be6ee13a-955b-4606-98a6-f14053ea6aa5', N'CreditCard');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name') AND [object_id] = OBJECT_ID(N'[PaymentMethods]'))
+    SET IDENTITY_INSERT [PaymentMethods] OFF;
+2025-01-16 16:29:46.246 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250116142923_AddingPaymentMethodsTable', N'8.0.0');

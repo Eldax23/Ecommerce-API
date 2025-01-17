@@ -1,8 +1,10 @@
 using AutoMapper;
+using eCommerceApp.Application.DTOs.Cart;
 using eCommerceApp.Application.DTOs.Category;
 using eCommerceApp.Application.DTOs.Identity;
 using eCommerceApp.Application.DTOs.Product;
 using eCommerceApp.Domain.Entites;
+using eCommerceApp.Domain.Entites.Cart;
 using eCommerceApp.Domain.Entites.Identity;
 
 namespace eCommerceApp.Application.Mapping;
@@ -24,6 +26,8 @@ public class MappingConfig : Profile
         CreateMap<GetProduct, Product>();
         CreateMap<Product , UpdateProduct>();
         CreateMap<UpdateProduct , Product>();
+
+        CreateMap<PaymentMethod, GetPaymentMethod>();
 
     }
 }

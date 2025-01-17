@@ -159,6 +159,28 @@ namespace eCommerceApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("eCommerceApp.Domain.Entites.Cart.PaymentMethod", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PaymentMethods");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("be6ee13a-955b-4606-98a6-f14053ea6aa5"),
+                            Name = "CreditCard"
+                        });
+                });
+
             modelBuilder.Entity("eCommerceApp.Domain.Entites.Category", b =>
                 {
                     b.Property<Guid>("Id")
