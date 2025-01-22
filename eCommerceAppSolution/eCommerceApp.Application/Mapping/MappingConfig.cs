@@ -26,6 +26,7 @@ public class MappingConfig : Profile
         CreateMap<GetProduct, Product>();
         CreateMap<Product , UpdateProduct>();
         CreateMap<UpdateProduct , Product>();
+        CreateMap<CreateArchive , Archive>();
 
         CreateMap<PaymentMethod, GetPaymentMethod>();
 

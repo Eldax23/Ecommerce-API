@@ -159,6 +159,29 @@ namespace eCommerceApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("eCommerceApp.Domain.Entites.Cart.Archive", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedData")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CheckOutArchives");
+                });
+
             modelBuilder.Entity("eCommerceApp.Domain.Entites.Cart.PaymentMethod", b =>
                 {
                     b.Property<Guid>("Id")
@@ -176,7 +199,7 @@ namespace eCommerceApp.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("be6ee13a-955b-4606-98a6-f14053ea6aa5"),
+                            Id = new Guid("e8cd4d3e-923c-4dc9-a4db-df72f958957e"),
                             Name = "CreditCard"
                         });
                 });

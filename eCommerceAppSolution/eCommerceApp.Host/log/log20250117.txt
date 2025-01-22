@@ -352,3 +352,56 @@ FROM [PaymentMethods] AS [p]
 2025-01-17 03:16:00.972 +02:00 [INF] Executed endpoint 'eCommerceApp.Host.Controllers.PaymentController.GetAllPayments (eCommerceApp.Host)'
 2025-01-17 03:16:00.982 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/api/Payment - 200 null application/json; charset=utf-8 1192.5883ms
 2025-01-17 04:10:07.760 +02:00 [INF] Application is shutting down...
+2025-01-17 17:03:11.552 +02:00 [INF] Application Is Building.....
+2025-01-17 17:03:12.626 +02:00 [INF] User profile is available. Using 'C:\Users\moham\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-17 17:03:12.923 +02:00 [INF] Application Is Running.....
+2025-01-17 17:03:13.001 +02:00 [INF] Now listening on: http://localhost:5071
+2025-01-17 17:03:13.003 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-17 17:03:13.003 +02:00 [INF] Hosting environment: Development
+2025-01-17 17:03:13.004 +02:00 [INF] Content root path: D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host
+2025-01-17 17:03:13.781 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/index.html - null null
+2025-01-17 17:03:14.591 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/index.html - 200 null text/html;charset=utf-8 810.5165ms
+2025-01-17 17:03:14.667 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - null null
+2025-01-17 17:03:14.752 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5071/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.0773ms
+2025-01-17 17:04:02.579 +02:00 [INF] Application is shutting down...
+2025-01-17 23:07:22.038 +02:00 [INF] Application Is Building.....
+2025-01-17 23:07:23.603 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-17 23:07:23.695 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-17 23:07:41.807 +02:00 [INF] Application Is Building.....
+2025-01-17 23:07:42.232 +02:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-01-17 23:07:42.798 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-17 23:07:42.818 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-17 23:07:42.822 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-17 23:07:42.823 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-17 23:07:42.856 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-17 23:07:42.869 +02:00 [INF] Applying migration '20250117210725_AddingCheckoutArchives'.
+2025-01-17 23:07:42.923 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [PaymentMethods]
+WHERE [Id] = 'be6ee13a-955b-4606-98a6-f14053ea6aa5';
+SELECT @@ROWCOUNT;
+2025-01-17 23:07:42.941 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CheckOutArchives] (
+    [Id] uniqueidentifier NOT NULL,
+    [ProductId] uniqueidentifier NOT NULL,
+    [Quantity] int NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedData] datetime2 NOT NULL,
+    CONSTRAINT [PK_CheckOutArchives] PRIMARY KEY ([Id])
+);
+2025-01-17 23:07:42.971 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name') AND [object_id] = OBJECT_ID(N'[PaymentMethods]'))
+    SET IDENTITY_INSERT [PaymentMethods] ON;
+INSERT INTO [PaymentMethods] ([Id], [Name])
+VALUES ('e8cd4d3e-923c-4dc9-a4db-df72f958957e', N'CreditCard');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name') AND [object_id] = OBJECT_ID(N'[PaymentMethods]'))
+    SET IDENTITY_INSERT [PaymentMethods] OFF;
+2025-01-17 23:07:42.974 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250117210725_AddingCheckoutArchives', N'8.0.0');

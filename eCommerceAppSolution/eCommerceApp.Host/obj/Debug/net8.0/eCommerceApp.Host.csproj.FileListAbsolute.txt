@@ -35,7 +35,6 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microso
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\NuGet.Common.dll
@@ -57,11 +56,8 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Composition.Runtime.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Composition.TypedParts.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\af\Humanizer.resources.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\ar\Humanizer.resources.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -201,10 +197,6 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\ru\Micr
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\obj\Debug\net8.0\eCommerceApp.Host.csproj.AssemblyReference.cache
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\obj\Debug\net8.0\eCommerceApp.Host.GeneratedMSBuildEditorConfig.editorconfig
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\obj\Debug\net8.0\eCommerceApp.Host.AssemblyInfoInputs.cache
@@ -280,3 +272,4 @@ D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Microso
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Ecommerce-API\eCommerceAppSolution\eCommerceApp.Host\bin\Debug\net8.0\Stripe.net.dll

@@ -75,6 +75,7 @@ public static class ServiceContainer
         services.AddScoped<ITokenManagement, TokenManagment>();
         services.AddScoped<IPaymentMethod, PaymentMethodRepository>();
         services.AddScoped<IPaymentMethodService, PaymentMethodService>();
+        services.AddScoped<IPaymentService, StripePaymentService>();
         return services;
     }
 
